@@ -65,7 +65,7 @@ public class RepositoryCheckMojo extends AbstractMojo {
     /**
      * The target coordinates
      *
-     * @parameter expression="${artifactCoords}"
+     * @parameter property="artifactCoords"
      * @required
      */
     private String artifactCoords;
