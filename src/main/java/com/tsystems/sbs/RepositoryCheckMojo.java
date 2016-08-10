@@ -6,26 +6,15 @@ import org.apache.maven.plugin.MojoFailureException;
 import org.eclipse.aether.DefaultRepositorySystemSession;
 import org.eclipse.aether.RepositorySystem;
 import org.eclipse.aether.RepositorySystemSession;
-import org.eclipse.aether.SyncContext;
 import org.eclipse.aether.artifact.Artifact;
-import org.eclipse.aether.artifact.ArtifactProperties;
 import org.eclipse.aether.artifact.DefaultArtifact;
-import org.eclipse.aether.graph.Dependency;
 import org.eclipse.aether.impl.ArtifactResolver;
-import org.eclipse.aether.impl.DefaultServiceLocator;
-import org.eclipse.aether.repository.ArtifactRepository;
 import org.eclipse.aether.repository.RemoteRepository;
 import org.eclipse.aether.repository.RepositoryPolicy;
 import org.eclipse.aether.resolution.*;
 
-import org.eclipse.aether.spi.connector.RepositoryConnectorFactory;
-import org.apache.maven.repository.internal.MavenRepositorySystemUtils;
-
 import org.eclipse.aether.repository.LocalRepository;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -33,6 +22,7 @@ import java.util.List;
  *
  * @goal check-repository
  * @phase validate
+ * @aggregator true
  */
 public class RepositoryCheckMojo extends AbstractMojo {
     /**
